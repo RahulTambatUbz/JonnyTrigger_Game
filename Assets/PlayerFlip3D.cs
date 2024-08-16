@@ -10,10 +10,11 @@ public class PlayerFlip3D : MonoBehaviour
     public float slowMoTimeScale = 0.2f;  // The time scale during slow motion
     public float slowMoDuration = 1f;  // The duration of the slow-motion effect
     public float slowMoTransitionDuration = 0.5f;  // Duration of the transition to/from slow-mo
-
+    [SerializeField] Rigidbody rb;
     public GameObject bulletPrefab;   // The bullet prefab to shoot
     public Transform shootingPoint;   // The point from where the bullet will be shot
     public float bulletSpeed = 20f;   // The speed of the bullet
+    [SerializeField] Animator animator;
 
     private bool isFlipping = false;
     private Vector3 pointA;
@@ -24,21 +25,32 @@ public class PlayerFlip3D : MonoBehaviour
     {
         if (other.CompareTag("FlipTrigger") && !isFlipping)
         {
+           
+             pointB = other.gameObject.GetComponent<FlipPath>().GetPathPoint();
+            flipDuration = other.gameObject.GetComponent<FlipPath>().GetFlipDuration();
             // Start slow motion with smooth transition
             StartCoroutine(SmoothSlowMotion(slowMoTimeScale, slowMoTransitionDuration));
             pointA = transform.position;
             isFlipping = true;
+            animator.SetBool("IsFiring", isFlipping);
+            rb.useGravity = false;
             flipTime = 0f;
             originalTimeScale = Time.timeScale;
         }
     }
-
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
+    }
     void Update()
     {
+
         if (isFlipping)
         {
+           
             flipTime += Time.deltaTime * (0.2f / slowMoTimeScale);
-
+           
             // Calculate the normalized time (t) for the flip
             float t = flipTime / flipDuration;
 
@@ -64,6 +76,8 @@ public class PlayerFlip3D : MonoBehaviour
             {
                 // End flip and start transition back to normal speed
                 isFlipping = false;
+                rb.useGravity = true;
+                animator.SetBool("IsFiring", isFlipping);
                 transform.position = pointB.position;  // Ensure final position is point B
                 transform.rotation = Quaternion.LookRotation(pointB.position - pointA);  // Reset rotation to look at point B
                 StartCoroutine(EndSlowMotion());
