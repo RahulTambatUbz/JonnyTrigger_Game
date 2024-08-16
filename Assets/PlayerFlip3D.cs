@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerFlip3D : MonoBehaviour
 {
+    [SerializeField] TMP_Text ammoText;
     public Transform pointB;          // The point where the player will land after the flip
     public float flipDuration = 1f;   // The duration of the flip
     public float arcHeight = 2f;      // The height of the arc
@@ -15,7 +17,7 @@ public class PlayerFlip3D : MonoBehaviour
     public Transform shootingPoint;   // The point from where the bullet will be shot
     public float bulletSpeed = 20f;   // The speed of the bullet
     [SerializeField] Animator animator;
-
+    private Ammo ammo;
     private bool isFlipping = false;
     private Vector3 pointA;
     private float flipTime = 0f;
@@ -40,8 +42,11 @@ public class PlayerFlip3D : MonoBehaviour
     }
     private void Awake()
     {
+       
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+        ammo = GetComponent<Ammo>();
+        ammoText.text = ammo.currentAmmo.ToString();
     }
     void Update()
     {
@@ -89,15 +94,23 @@ public class PlayerFlip3D : MonoBehaviour
     {
         if (bulletPrefab != null && shootingPoint != null)
         {
-            // Instantiate the bullet at the shooting point
-            GameObject bullet = Instantiate(bulletPrefab, shootingPoint.position, shootingPoint.rotation);
-
-            // Get the Rigidbody component and apply force to it
-            Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
-            if (bulletRb != null)
+            if(ammo.currentAmmo != 0)
             {
-                bulletRb.velocity = shootingPoint.forward * bulletSpeed;
+                ammo.currentAmmo--;
+                ammoText.text = ammo.currentAmmo.ToString();
+                // Instantiate the bullet at the shooting point
+                GameObject bullet = Instantiate(bulletPrefab, shootingPoint.position, shootingPoint.rotation);
+
+                // Get the Rigidbody component and apply force to it
+                Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+                if (bulletRb != null)
+                {
+                    bulletRb.velocity = shootingPoint.forward * bulletSpeed;
+                }
+
             }
+            
+          
         }
     }
 

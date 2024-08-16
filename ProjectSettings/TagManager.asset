@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - FlipTrigger
+  - ENEMY
   layers:
   - Default
   - TransparentFX
