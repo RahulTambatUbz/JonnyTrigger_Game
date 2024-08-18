@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class DamageEnemy : MonoBehaviour
 {
+    [SerializeField] private float bullteLifeTime;
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
+        
         if(other.gameObject.CompareTag("ENEMY"))
         {
 
@@ -15,5 +17,11 @@ public class DamageEnemy : MonoBehaviour
 
         }
        
+    }
+    private void Start()
+    {
+        
+        Destroy(gameObject, bullteLifeTime);
+
     }
 }

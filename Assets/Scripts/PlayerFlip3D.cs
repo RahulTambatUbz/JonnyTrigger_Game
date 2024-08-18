@@ -62,7 +62,7 @@ public class PlayerFlip3D : MonoBehaviour
 
         if (isFlipping)
         {
-
+           
             flipTime += Time.deltaTime * (0.2f / slowMoTimeScale);
             UpdateLineRenderer();
             lineRenderer.enabled = true;
@@ -80,7 +80,7 @@ public class PlayerFlip3D : MonoBehaviour
 
             // Rotate around the forward axis (adjust as necessary for your game's needs)
             transform.rotation = Quaternion.Euler(angle, 0, 0) * Quaternion.LookRotation(pointB.position - pointA);
-
+           
             // Check if the shoot button is pressed
             if (Input.GetButtonDown("Fire1")) // Default "Fire1" is left mouse button or Ctrl
             {
