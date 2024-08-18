@@ -1,35 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
+public enum PlayerStates
+{
+    Flipping,
+    Moving,
+    Jumping
+}
 
 public class FlipPath : MonoBehaviour
 {
-    //public Transform pointA;
     public Transform pointB;
     public float flipDuration;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public PlayerStates currentState;  // New property to define the action type
 
     public Transform GetPathPoint()
     {
-        return (pointB);
+        return pointB;
+    }
 
-
-
-    }public float GetFlipDuration()
+    public float GetFlipDuration()
     {
-        return (flipDuration);
+        return flipDuration;
+    }
 
-
-
+    public PlayerStates GetActionType()
+    {
+        return currentState;
     }
 }

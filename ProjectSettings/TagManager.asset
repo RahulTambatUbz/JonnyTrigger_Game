@@ -6,6 +6,7 @@ TagManager:
   tags:
   - FlipTrigger
   - ENEMY
+  - MOVETRIGGER
   layers:
   - Default
   - TransparentFX
