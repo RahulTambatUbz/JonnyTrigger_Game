@@ -251,7 +251,7 @@ public class PlayerFlip3D : MonoBehaviour
         if (lineRenderer != null && shootingPoint != null)
         {
             lineRenderer.SetPosition(0, shootingPoint.position);
-            lineRenderer.SetPosition(1, shootingPoint.position + shootingPoint.up * shootingProjectilePathLength);
+            lineRenderer.SetPosition(1, shootingPoint.position + shootingPoint.forward * shootingProjectilePathLength);
         }
     }
 
