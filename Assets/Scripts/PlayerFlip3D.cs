@@ -26,6 +26,7 @@ public class PlayerFlip3D : MonoBehaviour
     [SerializeField] private float shootingProjectilePathLength = 2f;
     private PlayerState currentState;
     [SerializeField] private float moveSpeed;
+    [SerializeField] BulletUI bulletUI;
 
 
 
@@ -203,6 +204,7 @@ public class PlayerFlip3D : MonoBehaviour
             {
                 ammo.currentAmmo--;
                 ammoText.text = ammo.currentAmmo.ToString();
+                bulletUI.UpdateUI();
                 // Instantiate the bullet at the shooting point
                 GameObject bullet = Instantiate(bulletPrefab, shootingPoint.position, shootingPoint.rotation);
 

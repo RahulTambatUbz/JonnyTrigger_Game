@@ -6,7 +6,7 @@ public class BulletUI : MonoBehaviour
 {
     [SerializeField] public Ammo ammo;
     [SerializeField] private GameObject objectToSpawn;
-
+    private int currentIndex = 0;
     private void Awake()
     {
         for (int i = 0; i < ammo.maxAmmo; i++)
@@ -25,5 +25,34 @@ public class BulletUI : MonoBehaviour
     void Update()
     {
         
+    }
+    public void UpdateUI()
+    {
+
+        if(transform.childCount > 0)
+        {
+            if(currentIndex >= transform.childCount)
+            {
+                currentIndex = 0;
+
+            }
+
+            Transform child = transform.GetChild(currentIndex);
+
+            // Destroy the child GameObject
+            Destroy(child.gameObject);
+
+            // Increment the index for the next call
+            currentIndex++;
+
+
+        }
+         else
+        {
+            Debug.Log("No more children to destroy.");
+        }
+
+
+
     }
 }
