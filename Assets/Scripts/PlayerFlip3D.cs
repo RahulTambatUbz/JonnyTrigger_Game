@@ -216,6 +216,12 @@ public class PlayerFlip3D : MonoBehaviour
                 }
 
             }
+            else
+            {
+                ReloadAmmo();
+
+
+            }
 
 
         }
@@ -255,6 +261,16 @@ public class PlayerFlip3D : MonoBehaviour
             lineRenderer.SetPosition(0, shootingPoint.position);
             lineRenderer.SetPosition(1, shootingPoint.position + shootingPoint.forward * shootingProjectilePathLength);
         }
+    }
+
+
+    void ReloadAmmo()
+    {
+
+        ammo.currentAmmo = ammo.maxAmmo;
+        bulletUI.ReloadBulletUI();
+        Debug.Log("Reloaded");
+
     }
 
 

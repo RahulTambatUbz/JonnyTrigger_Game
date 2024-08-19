@@ -9,11 +9,7 @@ public class BulletUI : MonoBehaviour
     private int currentIndex = 0;
     private void Awake()
     {
-        for (int i = 0; i < ammo.maxAmmo; i++)
-        {
-            Instantiate(objectToSpawn,transform);
-
-        }
+        ReloadBulletUI(); 
     }
     // Start is called before the first frame update
     void Start()
@@ -53,6 +49,17 @@ public class BulletUI : MonoBehaviour
         }
 
 
+
+    }
+
+    public void ReloadBulletUI()
+    {
+
+        for (int i = 0; i < ammo.maxAmmo; i++)
+        {
+            Instantiate(objectToSpawn, transform);
+
+        }
 
     }
 }
