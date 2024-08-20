@@ -1,0 +1,1508 @@
+fileFormatVersion: 2
+guid: e010a383494b8b142942c548b1fc2622
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_0
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 1890
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4793f8f2f305f488a64fe4d4e974dd
+      internalID: -1440221223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_1
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 1878
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f553eef8ece3d43bb8b12c4f226905
+      internalID: 248254159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_2
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1444
+        width: 335
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56df73f9831bd9f429c5a0f186d0bdde
+      internalID: -786765053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_3
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1416
+        width: 384
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70dd2df1803aac4db613d1c67fdfaf3
+      internalID: 724043348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_4
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 1422
+        width: 383
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b04b306e1fb7bb45bae4dd4e41bf930
+      internalID: 511000396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_5
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 1424
+        width: 396
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca728f6818f74684f86001d80e9daf3e
+      internalID: 1585814014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_6
+      rect:
+        serializedVersion: 2
+        x: 1908
+        y: 1512
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ea91a5f246e59438aee5cb33ab1d3f
+      internalID: -1227205556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_7
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1494
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4978cb31fca5f754db1998feed242637
+      internalID: -2133450604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_8
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 1494
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4e8a29b15fc9e41afbdbac102a19dc
+      internalID: -1868677742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_9
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1434
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236ad8e6648c1354aafc0ee1b0b644c6
+      internalID: 1788756597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_10
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1416
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f591008ab75e30e48a6a9d07d9ef87b1
+      internalID: -361870403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_11
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 1380
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436bd9241cf35bc48a367bffd52f634b
+      internalID: -1681011288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_12
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 1380
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cebb8eb35fdaa4b88200ecfae2420d
+      internalID: -1536548600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_13
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 1344
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53209ee1fde700c469dbb54001059f45
+      internalID: -618519408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_14
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1326
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a434d2f05f313438bddc1a9d718a0e
+      internalID: -1494561441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_15
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 780
+        width: 366
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c974a349f3768c34ea1e537258cafaa0
+      internalID: 1198322880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_16
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 767
+        width: 306
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64aa83b9128abc74799c24da5f4f8af2
+      internalID: -314086767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_17
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 1278
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828467cd6745a114b89279572e467459
+      internalID: 1317824363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_18
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 738
+        width: 342
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc6eda95742c8849b14901d8abd5da2
+      internalID: -640070024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_19
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 1242
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42d7bf4261bdb841aac04464688d4d2
+      internalID: 853849266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_20
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 1242
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e108fff048f5b46b05b2a46707c438
+      internalID: 1045914968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_21
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1218
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb76a81fca787fb4195853346a732eac
+      internalID: -1812612280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_22
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1218
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78509ba080517a4bb6ebd343106578a
+      internalID: -989220478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_23
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 770
+        width: 379
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96885c5b81abb74a97def58b8a4329d
+      internalID: 1259761688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_24
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 1176
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5379b81757769b447927c3801699e76b
+      internalID: 159616102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_25
+      rect:
+        serializedVersion: 2
+        x: 1476
+        y: 1158
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae9087495b6e884ea76b12fbad514bf
+      internalID: 1992001741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_26
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 1122
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a8344b83fdafd4a87a359f64574caa
+      internalID: 34552763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_27
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 1056
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f99031bbe17a9734e9b465630c05c4a1
+      internalID: 113311371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_28
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 918
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a946b607d1217428cbbf418afef9a0
+      internalID: 1589105968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_29
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 912
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70279657dd50a914c882ee00c4b11bda
+      internalID: -1790248554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_30
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 894
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb84be238b2023c4983d7a4b9d4bb157
+      internalID: -2006870256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_31
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 888
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b7ba5d854e6249448a90bb4a88020a8
+      internalID: -714454806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_32
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 720
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5278c1fe4063e4e41aaef57822daa75e
+      internalID: -889413342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_33
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 720
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b3a0981d935174ea14cf15cca651ab
+      internalID: -1360275185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_34
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 144
+        width: 377
+        height: 540
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0f518632dfa224f968a23a5ff379fc
+      internalID: -368456736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_35
+      rect:
+        serializedVersion: 2
+        x: 1485
+        y: 179
+        width: 393
+        height: 465
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1c08ba9f19660449e74381c7a4bba5
+      internalID: -1863537640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_36
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 642
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3b15c005cf14345859ff8718b38bff
+      internalID: -320673229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_37
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 642
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff4ee19560981045961e15c61b50c4f
+      internalID: 234609797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_38
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 198
+        width: 415
+        height: 443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a5750acc09aab4a8a5be87b4336d44
+      internalID: -191636669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_39
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 153
+        width: 384
+        height: 489
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c93a90a00c70142bc28b11492dd2d9
+      internalID: 570173311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_40
+      rect:
+        serializedVersion: 2
+        x: 1434
+        y: 558
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da0c3cbcd734434c9be6dee21d2b0bd
+      internalID: 1702196050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_41
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 516
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b3e7a636292e549821913bd462fd49
+      internalID: 1845322499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_42
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 504
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5551ff23ec1c354caf7df7236a29721
+      internalID: 157879683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_43
+      rect:
+        serializedVersion: 2
+        x: 1914
+        y: 408
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 743c950c5aab2aa4e81d7095d5fcff19
+      internalID: -1217709739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_44
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 324
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f374a74154df2704aac2485d45061944
+      internalID: 178050704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_45
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 282
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa307e5a79f49734e801468b0e6eaf42
+      internalID: 771869442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_46
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 252
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ba3ab3b030ba142818e468d11a36fa
+      internalID: -1858492430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_47
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 132
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce1b8296f63f9342a7e01a1b40d7384
+      internalID: 705088587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_48
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 132
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4dd292fa329174f912a8873e42c8db
+      internalID: -921198684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_49
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 126
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fdc3f87a371f0446a037a1fdcdee2b6
+      internalID: -1024348462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_50
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 59
+        width: 62
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ee10c076d2a8b48954ce4951107c85
+      internalID: -1900920451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_51
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 50
+        width: 51
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b63df476b900747a7d5b9557d4acb8
+      internalID: 1300621128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_52
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 79
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9cbefd582ee6de4e82f8c23558f667d
+      internalID: 1086025620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_53
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 79
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44018889befe74f4580ff7c758f8f3a6
+      internalID: -1826129509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_54
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 50
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b869713001372804c8ee7008f50b0a87
+      internalID: 1045062220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_55
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 56
+        width: 62
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c86072ce06af3284d82df00d07198ffa
+      internalID: -1682650307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_56
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 59
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e2fa730c4bcbf46ab5e6b40f2ab432
+      internalID: -1973713540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_57
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 36
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e7f360f37f850341af344c9d6a3b94b
+      internalID: 1254465621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_58
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 12
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebe1df62e4521241b158e4779b97123
+      internalID: -994764113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_59
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 0
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cfcfa5e5ed31d448a996c8c7584d10a
+      internalID: 441443319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: collection-colorful-gemstones_60
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 0
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1289f3a12adb5418bfc50a0780c30a
+      internalID: -327587926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 979e7b5cb6776cc47963c2b384f875fd
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      collection-colorful-gemstones_0: -1440221223
+      collection-colorful-gemstones_1: 248254159
+      collection-colorful-gemstones_10: -361870403
+      collection-colorful-gemstones_11: -1681011288
+      collection-colorful-gemstones_12: -1536548600
+      collection-colorful-gemstones_13: -618519408
+      collection-colorful-gemstones_14: -1494561441
+      collection-colorful-gemstones_15: 1198322880
+      collection-colorful-gemstones_16: -314086767
+      collection-colorful-gemstones_17: 1317824363
+      collection-colorful-gemstones_18: -640070024
+      collection-colorful-gemstones_19: 853849266
+      collection-colorful-gemstones_2: -786765053
+      collection-colorful-gemstones_20: 1045914968
+      collection-colorful-gemstones_21: -1812612280
+      collection-colorful-gemstones_22: -989220478
+      collection-colorful-gemstones_23: 1259761688
+      collection-colorful-gemstones_24: 159616102
+      collection-colorful-gemstones_25: 1992001741
+      collection-colorful-gemstones_26: 34552763
+      collection-colorful-gemstones_27: 113311371
+      collection-colorful-gemstones_28: 1589105968
+      collection-colorful-gemstones_29: -1790248554
+      collection-colorful-gemstones_3: 724043348
+      collection-colorful-gemstones_30: -2006870256
+      collection-colorful-gemstones_31: -714454806
+      collection-colorful-gemstones_32: -889413342
+      collection-colorful-gemstones_33: -1360275185
+      collection-colorful-gemstones_34: -368456736
+      collection-colorful-gemstones_35: -1863537640
+      collection-colorful-gemstones_36: -320673229
+      collection-colorful-gemstones_37: 234609797
+      collection-colorful-gemstones_38: -191636669
+      collection-colorful-gemstones_39: 570173311
+      collection-colorful-gemstones_4: 511000396
+      collection-colorful-gemstones_40: 1702196050
+      collection-colorful-gemstones_41: 1845322499
+      collection-colorful-gemstones_42: 157879683
+      collection-colorful-gemstones_43: -1217709739
+      collection-colorful-gemstones_44: 178050704
+      collection-colorful-gemstones_45: 771869442
+      collection-colorful-gemstones_46: -1858492430
+      collection-colorful-gemstones_47: 705088587
+      collection-colorful-gemstones_48: -921198684
+      collection-colorful-gemstones_49: -1024348462
+      collection-colorful-gemstones_5: 1585814014
+      collection-colorful-gemstones_50: -1900920451
+      collection-colorful-gemstones_51: 1300621128
+      collection-colorful-gemstones_52: 1086025620
+      collection-colorful-gemstones_53: -1826129509
+      collection-colorful-gemstones_54: 1045062220
+      collection-colorful-gemstones_55: -1682650307
+      collection-colorful-gemstones_56: -1973713540
+      collection-colorful-gemstones_57: 1254465621
+      collection-colorful-gemstones_58: -994764113
+      collection-colorful-gemstones_59: 441443319
+      collection-colorful-gemstones_6: -1227205556
+      collection-colorful-gemstones_60: -327587926
+      collection-colorful-gemstones_7: -2133450604
+      collection-colorful-gemstones_8: -1868677742
+      collection-colorful-gemstones_9: 1788756597
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
