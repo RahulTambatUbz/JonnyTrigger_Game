@@ -28,7 +28,8 @@ public class PlayerFlip3D : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] BulletUI bulletUI;
     [SerializeField] GameObject endGameUI;
-
+    [SerializeField] GameObject StartUI;
+    [SerializeField] bool isGameStarted;
     public enum PlayerState
     {
         Running,
@@ -82,7 +83,7 @@ public class PlayerFlip3D : MonoBehaviour
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+       // animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         ammo = GetComponent<Ammo>();
         ammoText.text = ammo.currentAmmo.ToString();
@@ -93,6 +94,7 @@ public class PlayerFlip3D : MonoBehaviour
         }
         lineRenderer.positionCount = 2;
         lineRenderer.enabled = false;
+        isGameStarted = false;
     }
 
     private void Start()
@@ -102,28 +104,41 @@ public class PlayerFlip3D : MonoBehaviour
 
     void Update()
     {
-        switch (currentState)
+        if(Input.GetMouseButtonDown(0))
+                {
+            if (!isGameStarted)
+            {
+                StartUI.SetActive(false);
+                isGameStarted = true;
+            }
+        }
+
+        if (isGameStarted)
         {
-            case PlayerState.Running:
-                HandleRunning();
-                break;
+            switch (currentState)
+            {
+                case PlayerState.Running:
+                    HandleRunning();
+                    break;
 
-            case PlayerState.Moving:
-                HandleMoving();
-                break;
+                case PlayerState.Moving:
+                    HandleMoving();
+                    break;
 
-            case PlayerState.Jumping:
-                // HandleJumping();
-                break;
+                case PlayerState.Jumping:
+                    // HandleJumping();
+                    break;
 
-            case PlayerState.Flipping:
-                HandleFlipping();
-                break;
+                case PlayerState.Flipping:
+                    HandleFlipping();
+                    break;
+            }
         }
     }
 
     private void HandleRunning()
     {
+        animator.SetBool("IsRunning", true);
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
     }
 
@@ -131,6 +146,7 @@ public class PlayerFlip3D : MonoBehaviour
     {
         if (isFlipping)
         {
+            animator.SetBool("IsRunning", false);
             flipTime += Time.deltaTime * (0.2f / slowMoTimeScale);
             UpdateLineRenderer();
             lineRenderer.enabled = true;
