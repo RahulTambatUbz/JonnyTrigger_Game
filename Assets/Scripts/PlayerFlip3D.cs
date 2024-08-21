@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static UnityEditor.FilePathAttribute;
 
 public class PlayerFlip3D : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class PlayerFlip3D : MonoBehaviour
     [SerializeField] GameObject endGameUI;
     [SerializeField] GameObject StartUI;
     [SerializeField] bool isGameStarted;
+    [SerializeField] private AudioClip bulletShotSound;
+    [SerializeField] private AudioSource audioSource;
     public enum PlayerState
     {
         Running,
@@ -173,12 +176,14 @@ public class PlayerFlip3D : MonoBehaviour
 
             if (Input.GetButtonDown("Fire1"))
             {
+               audioSource.Play();  
                 ShootBullet();
             }
 
             if (flipTime >= flipDuration)
             {
                 isFlipping = false;
+
 
 
                 rb.useGravity = true;
