@@ -27,9 +27,7 @@ public class PlayerFlip3D : MonoBehaviour
     private PlayerState currentState;
     [SerializeField] private float moveSpeed;
     [SerializeField] BulletUI bulletUI;
-
-
-
+    [SerializeField] GameObject endGameUI;
 
     public enum PlayerState
     {
@@ -37,63 +35,77 @@ public class PlayerFlip3D : MonoBehaviour
         Flipping,
         Moving,
         Jumping
-
-
     }
-
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("FlipTrigger") && !isFlipping)
+        FlipPath flipPath = other.gameObject.GetComponent<FlipPath>();
+        if (flipPath != null)
+        {
+            pointB = flipPath.GetPathPoint();
+            flipDuration = 2f;
+
+            if (flipPath.currentState == PlayerStates.Flipping && !isFlipping)
+            {
+                // Start slow motion with smooth transition
+                StartCoroutine(SmoothSlowMotion(slowMoTimeScale, slowMoTransitionDuration));
+                pointA = transform.position;
+                isFlipping = true;
+                currentState = PlayerState.Flipping;
+                animator.SetBool("IsFiring", isFlipping);
+                rb.useGravity = false;
+                flipTime = 0f;
+                originalTimeScale = Time.timeScale;
+            }
+            else if (flipPath.currentState == PlayerStates.Moving)
+            {
+                currentState = PlayerState.Moving;
+                pointA = transform.position;
+                flipTime = 0f;
+                Debug.Log("fix");
+            }
+        }
+        else
+        {
+            Debug.LogError("FlipPath component not found on the trigger object.");
+        }
+
+        if(other.gameObject.CompareTag("MOVETRIGGER"))
         {
 
-            pointB = other.gameObject.GetComponent<FlipPath>().GetPathPoint();
-            flipDuration = other.gameObject.GetComponent<FlipPath>().GetFlipDuration();
-            // Start slow motion with smooth transition
-            StartCoroutine(SmoothSlowMotion(slowMoTimeScale, slowMoTransitionDuration));
-            pointA = transform.position;
-            isFlipping = true;
-            currentState = PlayerState.Flipping;
-            animator.SetBool("IsFiring", isFlipping);
-            rb.useGravity = false;
-            flipTime = 0f;
-            originalTimeScale = Time.timeScale;
-        }
-        if (other.CompareTag("MOVETRIGGER"))
-        {
-            pointB = other.gameObject.GetComponent<FlipPath>().GetPathPoint();
-            flipDuration = other.gameObject.GetComponent<FlipPath>().GetFlipDuration();
-            currentState = PlayerState.Moving;
-            
+            Time.timeScale = 0f;
+            endGameUI.SetActive(true);
+
+
         }
     }
+
     private void Awake()
     {
-
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         ammo = GetComponent<Ammo>();
         ammoText.text = ammo.currentAmmo.ToString();
+        endGameUI.SetActive(false);
         if (lineRenderer == null)
         {
             lineRenderer = GetComponent<LineRenderer>();
-
         }
         lineRenderer.positionCount = 2;
         lineRenderer.enabled = false;
     }
+
     private void Start()
     {
         currentState = PlayerState.Running;
     }
+
     void Update()
     {
         switch (currentState)
         {
-
-
             case PlayerState.Running:
-                HandelRunning();
+                HandleRunning();
                 break;
 
             case PlayerState.Moving:
@@ -101,177 +113,174 @@ public class PlayerFlip3D : MonoBehaviour
                 break;
 
             case PlayerState.Jumping:
-                //HandelJumping();
+                // HandleJumping();
                 break;
 
             case PlayerState.Flipping:
-                HandelFlipping();
+                HandleFlipping();
                 break;
-
-
-
-
-
-
         }
-
     }
-    private void HandelRunning()
+
+    private void HandleRunning()
     {
-
         transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
-
-
-
     }
-    private void HandelFlipping()
+
+    private void HandleFlipping()
     {
         if (isFlipping)
         {
-
             flipTime += Time.deltaTime * (0.2f / slowMoTimeScale);
             UpdateLineRenderer();
             lineRenderer.enabled = true;
-            // Calculate the normalized time (t) for the flip
+
             float t = flipTime / flipDuration;
 
-            // Calculate the arc height using a sine wave for a smooth curve
+            // Avoid division by zero
+            if (flipDuration == 0)
+            {
+                Debug.LogError("flipDuration is zero, which will cause a divide by zero error.");
+                return;
+
+            }
+
             float arc = Mathf.Sin(Mathf.PI * t) * arcHeight;
 
-            // Perform the flip
-            float angle = Mathf.Lerp(0, 360, t);  // Rotate from 0 to 360 degrees
             Vector3 targetPosition = Vector3.Lerp(pointA, pointB.position, t);
-            targetPosition.y += arc;  // Add the arc height to the Y position
-            transform.position = targetPosition;  // Move from point A to point B with the arc
+            targetPosition.y += arc;
 
-            // Rotate around the forward axis (adjust as necessary for your game's needs)
+            transform.position = targetPosition;
+
+            float angle = Mathf.Lerp(0, 360, t);
             transform.rotation = Quaternion.Euler(angle, 0, 0) * Quaternion.LookRotation(pointB.position - pointA);
 
-            // Check if the shoot button is pressed
-            if (Input.GetButtonDown("Fire1")) // Default "Fire1" is left mouse button or Ctrl
+            if (Input.GetButtonDown("Fire1"))
             {
                 ShootBullet();
             }
 
             if (flipTime >= flipDuration)
             {
-                // End flip and start transition back to normal speed
                 isFlipping = false;
                 currentState = PlayerState.Running;
                 rb.useGravity = true;
                 animator.SetBool("IsFiring", isFlipping);
-                transform.position = pointB.position;  // Ensure final position is point B
-                transform.rotation = Quaternion.LookRotation(pointB.position - pointA);  // Reset rotation to look at point B
+                transform.position = pointB.position;
+                transform.rotation = Quaternion.LookRotation(pointB.position - pointA);
                 StartCoroutine(EndSlowMotion());
                 lineRenderer.enabled = false;
             }
         }
-
-
-
     }
+
     private void HandleMoving()
     {
-        flipTime += Time.deltaTime * (0.2f / slowMoTimeScale);
-        UpdateLineRenderer();
-        lineRenderer.enabled = true;
-        // Calculate the normalized time (t) for the flip
-        float time = flipTime / flipDuration;
-        // Check if the shoot button is pressed
-        if (Input.GetButtonDown("Fire1")) // Default "Fire1" is left mouse button or Ctrl
+        flipTime += Time.deltaTime / flipDuration; // Normalized time based on flipDuration
+
+        if (flipDuration == 0)
+        {
+            Debug.LogError("flipDuration is zero, which will cause a divide by zero error.");
+            return;
+        }
+
+        float t = Mathf.Clamp01(flipTime); // Ensure t is clamped between 0 and 1
+
+        // Lerp the position without the arc and rotation
+        transform.position = Vector3.Lerp(pointA, pointB.position, t);
+
+        if (Input.GetButtonDown("Fire1"))
         {
             ShootBullet();
         }
-        //logic for moving from point A to B
 
-        transform.position = Vector3.Lerp(pointA, pointB.position,time);
-
-        if (flipTime >= flipDuration)
+        if (flipTime >= 1f)
         {
-            currentState = PlayerState.Running; // or whatever the next state should be
+            currentState = PlayerState.Running;
+            lineRenderer.enabled = false;
         }
     }
+
 
     void HandleJumping()
     {
         // Logic for jumping from point A to B to C to N
     }
+
     void ShootBullet()
     {
         if (bulletPrefab != null && shootingPoint != null)
         {
-            if (ammo.currentAmmo != 0)
+            if (ammo.currentAmmo > 0)
             {
                 ammo.currentAmmo--;
                 ammoText.text = ammo.currentAmmo.ToString();
                 bulletUI.UpdateUI();
-                // Instantiate the bullet at the shooting point
-                GameObject bullet = Instantiate(bulletPrefab, shootingPoint.position, shootingPoint.rotation);
 
-                // Get the Rigidbody component and apply force to it
+                GameObject bullet = Instantiate(bulletPrefab, shootingPoint.position, shootingPoint.rotation);
                 Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+
                 if (bulletRb != null)
                 {
                     bulletRb.velocity = shootingPoint.forward * bulletSpeed;
                 }
-
             }
             else
             {
+                Debug.Log("Out of Ammo");
                 ReloadAmmo();
-
-
+                bulletUI.ReloadBulletUI();
             }
-
-
         }
     }
 
 
-    IEnumerator SmoothSlowMotion(float targetTimeScale, float duration)
+    IEnumerator SmoothSlowMotion(float targetTimeScale, float transitionDuration)
     {
-        float startTimeScale = Time.timeScale;
+        float start = Time.timeScale;
         float elapsedTime = 0f;
 
-        while (elapsedTime < duration)
+        while (elapsedTime < transitionDuration)
         {
+            Time.timeScale = Mathf.Lerp(start, targetTimeScale, elapsedTime / transitionDuration);
             elapsedTime += Time.unscaledDeltaTime;
-            Time.timeScale = Mathf.Lerp(startTimeScale, targetTimeScale, elapsedTime / duration);
             Time.fixedDeltaTime = 0.02f * Time.timeScale;
             yield return null;
         }
-
-        Time.timeScale = targetTimeScale;
-        Time.fixedDeltaTime = 0.02f * Time.timeScale;
+       
     }
 
     IEnumerator EndSlowMotion()
     {
-        // Wait for the additional slow-mo duration
-        yield return new WaitForSecondsRealtime(slowMoDuration);
+        float start = Time.timeScale;
+        float elapsedTime = 0f;
 
-        // Transition back to normal speed
-        StartCoroutine(SmoothSlowMotion(originalTimeScale, slowMoTransitionDuration));
-    }
-
-    void UpdateLineRenderer()
-    {
-        if (lineRenderer != null && shootingPoint != null)
+        while (elapsedTime < slowMoTransitionDuration)
         {
-            lineRenderer.SetPosition(0, shootingPoint.position);
-            lineRenderer.SetPosition(1, shootingPoint.position + shootingPoint.forward * shootingProjectilePathLength);
+            Time.timeScale = Mathf.Lerp(start, originalTimeScale, elapsedTime / slowMoTransitionDuration);
+            elapsedTime += Time.unscaledDeltaTime;
+            yield return null;
         }
+        Time.timeScale = originalTimeScale;
     }
 
 
-    void ReloadAmmo()
+    private void UpdateLineRenderer()
+    {
+        lineRenderer.SetPosition(0, shootingPoint.position);
+        lineRenderer.SetPosition(1, shootingPoint.position + shootingPoint.forward * shootingProjectilePathLength);
+    }
+
+   public void ReloadAmmo()
     {
 
-        ammo.currentAmmo = ammo.maxAmmo;
-        bulletUI.ReloadBulletUI();
-        Debug.Log("Reloaded");
+        if(ammo.currentAmmo <=0)
+        {
+            ammo.currentAmmo = ammo.maxAmmo;
+
+
+        }
+
 
     }
-
-
 }
