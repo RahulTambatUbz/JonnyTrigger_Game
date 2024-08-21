@@ -71,7 +71,7 @@ public class PlayerFlip3D : MonoBehaviour
             Debug.LogError("FlipPath component not found on the trigger object.");
         }
 
-        if(other.gameObject.CompareTag("MOVETRIGGER"))
+        if (other.gameObject.CompareTag("MOVETRIGGER"))
         {
 
             Time.timeScale = 0f;
@@ -83,7 +83,7 @@ public class PlayerFlip3D : MonoBehaviour
 
     private void Awake()
     {
-       // animator = GetComponent<Animator>();
+        // animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         ammo = GetComponent<Ammo>();
         ammoText.text = ammo.currentAmmo.ToString();
@@ -104,8 +104,8 @@ public class PlayerFlip3D : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
-                {
+        if (Input.GetMouseButtonDown(0))
+        {
             if (!isGameStarted)
             {
                 StartUI.SetActive(false);
@@ -179,17 +179,23 @@ public class PlayerFlip3D : MonoBehaviour
             if (flipTime >= flipDuration)
             {
                 isFlipping = false;
-                currentState = PlayerState.Running;
+
+
                 rb.useGravity = true;
                 animator.SetBool("IsFiring", isFlipping);
                 transform.position = pointB.position;
                 transform.rotation = Quaternion.LookRotation(pointB.position - pointA);
-                StartCoroutine(EndSlowMotion());
                 lineRenderer.enabled = false;
+                StartCoroutine(WaitAndRun(0.1733f));
             }
         }
     }
-
+    private IEnumerator WaitAndRun(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        currentState = PlayerState.Running;
+        StartCoroutine(EndSlowMotion());
+    }
     private void HandleMoving()
     {
         flipTime += Time.deltaTime / flipDuration; // Normalized time based on flipDuration
@@ -263,7 +269,7 @@ public class PlayerFlip3D : MonoBehaviour
             Time.fixedDeltaTime = 0.02f * Time.timeScale;
             yield return null;
         }
-       
+
     }
 
     IEnumerator EndSlowMotion()
@@ -287,10 +293,10 @@ public class PlayerFlip3D : MonoBehaviour
         lineRenderer.SetPosition(1, shootingPoint.position + shootingPoint.forward * shootingProjectilePathLength);
     }
 
-   public void ReloadAmmo()
+    public void ReloadAmmo()
     {
 
-        if(ammo.currentAmmo <=0)
+        if (ammo.currentAmmo <= 0)
         {
             ammo.currentAmmo = ammo.maxAmmo;
 
