@@ -36,6 +36,8 @@ public class PlayerFlip3D : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private Animator titlePanelAnimator;
     [SerializeField] private Animator shopPanelAnimator;
+    private bool flipClockwise = true; // Set to true for clockwise, false for counterclockwise
+
     public enum PlayerState
     {
         Running,
@@ -54,6 +56,9 @@ public class PlayerFlip3D : MonoBehaviour
 
             if (flipPath.currentState == PlayerStates.Flipping && !isFlipping)
             {
+                // Decide flip direction based on your conditions
+                flipClockwise = flipPath.GetIsClockwiseFlip(); // Custom method to determine flip direction
+
                 // Start slow motion with smooth transition
                 StartCoroutine(SmoothSlowMotion(slowMoTimeScale, slowMoTransitionDuration));
                 pointA = transform.position;
@@ -79,13 +84,18 @@ public class PlayerFlip3D : MonoBehaviour
 
         if (other.gameObject.CompareTag("MOVETRIGGER"))
         {
-
             Time.timeScale = 0f;
             endGameUI.SetActive(true);
-
-
         }
     }
+
+    private bool DetermineFlipDirection()
+    {
+        // Custom logic to decide flip direction
+        // Example: return true for clockwise, false for counterclockwise based on some condition
+        return Random.value > 0.5f; // Random flip direction for demo
+    }
+
 
     private void Awake()
     {
@@ -166,7 +176,6 @@ public class PlayerFlip3D : MonoBehaviour
             {
                 Debug.LogError("flipDuration is zero, which will cause a divide by zero error.");
                 return;
-
             }
 
             float arc = Mathf.Sin(Mathf.PI * t) * arcHeight;
@@ -176,7 +185,8 @@ public class PlayerFlip3D : MonoBehaviour
 
             transform.position = targetPosition;
 
-            float angle = Mathf.Lerp(0, 360, t);
+            // Determine the rotation direction based on flipClockwise
+            float angle = flipClockwise ? Mathf.Lerp(0, 360, t) : Mathf.Lerp(0, -360, t);
             transform.rotation = Quaternion.Euler(angle, 0, 0) * Quaternion.LookRotation(pointB.position - pointA);
 
             if (Input.GetButtonDown("Fire1"))
@@ -184,21 +194,40 @@ public class PlayerFlip3D : MonoBehaviour
                 ShootBullet();
             }
 
+            // Add smooth landing check
             if (flipTime >= flipDuration)
             {
                 isFlipping = false;
-
-
-
                 rb.useGravity = true;
                 animator.SetBool("IsFiring", isFlipping);
-                transform.position = pointB.position;
-                transform.rotation = Quaternion.LookRotation(pointB.position - pointA);
-                lineRenderer.enabled = false;
-                StartCoroutine(WaitAndRun(0.1733f));
+
+                // Smooth transition to landing
+                StartCoroutine(SmoothLanding());
             }
         }
     }
+
+    private IEnumerator SmoothLanding()
+    {
+        float elapsedTime = 0f;
+        float landingDuration = 0.2f; // Duration to smoothly land at pointB
+        Vector3 startPosition = transform.position;
+        Vector3 endPosition = pointB.position;
+
+        while (elapsedTime < landingDuration)
+        {
+            transform.position = Vector3.Lerp(startPosition, endPosition, elapsedTime / landingDuration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = endPosition;
+        transform.rotation = Quaternion.LookRotation(pointB.position - pointA);
+        lineRenderer.enabled = false;
+        StartCoroutine(WaitAndRun(0.1733f));
+    }
+
+
     private IEnumerator WaitAndRun(float delay)
     {
         yield return new WaitForSeconds(delay);

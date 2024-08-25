@@ -12,7 +12,7 @@ public class FlipPath : MonoBehaviour
     public Transform pointB;
     public float flipDuration;
     public PlayerStates currentState;  // New property to define the action type
-
+    public bool isClockwiseFlip;
     public Transform GetPathPoint()
     {
         return pointB;
@@ -26,5 +26,9 @@ public class FlipPath : MonoBehaviour
     public PlayerStates GetActionType()
     {
         return currentState;
+    }
+    public bool GetIsClockwiseFlip()
+    {
+        return isClockwiseFlip;
     }
 }
