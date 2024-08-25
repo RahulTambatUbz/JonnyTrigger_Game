@@ -32,7 +32,7 @@ public class PlayerFlip3D : MonoBehaviour
     [SerializeField] GameObject StartUI;
     [SerializeField] bool isGameStarted;
     [SerializeField] private AudioClip bulletShotSound;
-    [SerializeField] private AudioClip headShotSound;
+    // [SerializeField] private AudioClip headShotSound;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private Animator titlePanelAnimator;
     [SerializeField] private Animator shopPanelAnimator;
@@ -181,7 +181,6 @@ public class PlayerFlip3D : MonoBehaviour
 
             if (Input.GetButtonDown("Fire1"))
             {
-               audioSource.Play();  
                 ShootBullet();
             }
 
@@ -245,7 +244,7 @@ public class PlayerFlip3D : MonoBehaviour
         {
             if (ammo.currentAmmo > 0)
             {
-               // AudioSource.PlayClipAtPoint(headShotSound, transform.position,1);
+                audioSource.Play();
                 ammo.currentAmmo--;
                 ammoText.text = ammo.currentAmmo.ToString();
                 bulletUI.UpdateUI();

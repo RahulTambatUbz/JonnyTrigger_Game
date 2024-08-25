@@ -16,6 +16,13 @@ public class DamageEnemy : MonoBehaviour
             audioSource.Play();
            // other.gameObject.GetComponent<Enemy>().ActivateRagdoll();
             Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+        if(other.gameObject.CompareTag("Player"))
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+
 
         }
        
