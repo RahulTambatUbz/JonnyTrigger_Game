@@ -37,6 +37,10 @@ public class PlayerFlip3D : MonoBehaviour
     [SerializeField] private Animator titlePanelAnimator;
     [SerializeField] private Animator shopPanelAnimator;
     private bool flipClockwise = true; // Set to true for clockwise, false for counterclockwise
+    private List<Vector3> jumpPoints; // A list of intermediate points between A and B.
+    private int currentJumpIndex = 0; // Index to track the current jump point.
+    private float jumpSpeed = 5f; // Speed of the jumping movement.
+    private float jumpArcHeight = 2f; // The height of the arc for each jump segment.
 
     public enum PlayerState
     {
